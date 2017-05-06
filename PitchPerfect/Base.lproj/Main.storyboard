@@ -142,7 +142,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C2-dr-cZI" userLabel="StopButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
-                                                <state key="normal" image="Reverb"/>
+                                                <state key="normal" image="Stop"/>
                                                 <connections>
                                                     <action selector="stopButtonPressed:" destination="Sag-fK-sjP" eventType="touchUpInside" id="nFk-Ru-byr"/>
                                                 </connections>
