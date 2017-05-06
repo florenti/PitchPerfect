@@ -64,6 +64,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    //this funciton will be called to configure UI of RecordSoudnsViewController.swift
     func configureRecordingViewUI(_ isRecording: Bool) {
         if isRecording {
             stopRecordingButton.isEnabled = true
