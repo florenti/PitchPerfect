@@ -45,7 +45,6 @@ class PlaySoundsViewController: UIViewController {
         case .reverb:
             playSound(reverb: true)
         }
-        
         configureUI(.playing)
     }
     
@@ -60,6 +59,13 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        snailButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        chipmunkButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        rabbitButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        vaderButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        echoButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        reverbButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        stopButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         configureUI(.notPlaying)
     }
 }

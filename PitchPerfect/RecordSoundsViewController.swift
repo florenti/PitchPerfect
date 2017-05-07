@@ -51,12 +51,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             print("There was an error saving file")
-            let alertController = UIAlertController(title: "Error", message: "There was an error saving the audio file", preferredStyle: .alert)
-            let confirmAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                print("OK clicked.")
-            }
-            alertController.addAction(confirmAction)
-            self.present(alertController, animated: true, completion:nil)
+            showAlertToUser()
         }
     }
     
@@ -73,5 +68,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecordingButton.isEnabled = isRecording
         recordButton.isEnabled = !isRecording
         recordingLabel.text=isRecording ? "Recording in progress..." : "Tap to record"
+    }
+    
+    func showAlertToUser() {
+        let alertController = UIAlertController(title: "Error", message: "There was an error saving the audio file.", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            print("OK clicked.")
+        }
+        alertController.addAction(confirmAction)
+        self.present(alertController, animated: true, completion:nil)
     }
 }
